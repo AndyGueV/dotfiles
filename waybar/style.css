@@ -1,0 +1,306 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* ========================================
+   ELIMINAR ESPACIOS ENTRE MODULOS
+======================================== */
+
+.modules-left > widget,
+.modules-center > widget,
+.modules-right > widget {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   ESTILO GENERAL
+======================================== */
+
+#custom-arch,
+#workspaces,
+#custom-notifications,
+#clock,
+#network,
+#custom-screenshot,
+#pulseaudio,
+#custom-brightness,
+#bluetooth,
+#battery,
+#custom-power {
+    background: rgba(0, 0, 0, 0.95);
+
+    color: #cdd6f4;
+
+    padding: 9px 14px;
+
+    margin-top: 4px;
+
+    transition: all 0.2s ease;
+}
+
+/* ========================================
+   BORDES SOLO PARA LOS 3 GRUPOS
+======================================== */
+
+/* ========================================
+   IZQUIERDA
+======================================== */
+
+#custom-arch {
+    border-radius: 22px 0 0 22px;
+
+    padding-left: 18px;
+
+    margin-left: 14px;
+
+    color: #89b4fa;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+    border-left: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#workspaces {
+    border-radius: 0 22px 22px 0;
+
+    padding-right: 18px;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+    border-right: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+/* ========================================
+   WORKSPACES
+======================================== */
+
+#workspaces button {
+    background: transparent;
+
+    color: #6c7086;
+
+    padding: 0 5px;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+}
+
+#workspaces button:hover {
+    color: #cdd6f4;
+}
+
+/* ========================================
+   CENTRO
+======================================== */
+
+#custom-notifications {
+    border-radius: 22px 0 0 22px;
+
+    padding-left: 18px;
+
+    color: #89b4fa;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+    border-left: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#clock {
+    border-radius: 0;
+
+    color: #fab387;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#network {
+    border-radius: 0 22px 22px 0;
+
+    padding-right: 18px;
+
+    color: #89b4fa;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+    border-right: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#network.disconnected {
+    color: #f38ba8;
+}
+
+/* ========================================
+   DERECHA
+======================================== */
+
+#custom-screenshot {
+    border-radius: 22px 0 0 22px;
+
+    padding-left: 18px;
+
+    color: #cba6f7;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+    border-left: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+/* VOLUMEN */
+
+#pulseaudio {
+    color: #89b4fa;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#pulseaudio.muted {
+    color: #f38ba8;
+}
+
+/* BRILLO */
+
+#custom-brightness {
+    color: #f9e2af;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+/* BLUETOOTH */
+
+#bluetooth {
+    color: #89dceb;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#bluetooth.disabled {
+    color: #f38ba8;
+}
+
+/* BATERIA */
+
+#battery {
+    color: #a6e3a1;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: #f38ba8;
+}
+
+#battery.charging {
+    color: #89b4fa;
+}
+
+/* POWER */
+
+#custom-power {
+    border-radius: 0 22px 22px 0;
+
+    padding-right: 18px;
+
+    margin-right: 14px;
+
+    color: #f38ba8;
+
+    border-top: 1.5px solid rgba(137,180,250,0.90);
+    border-bottom: 1.5px solid rgba(137,180,250,0.90);
+    border-right: 1.5px solid rgba(137,180,250,0.90);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+/* ========================================
+   HOVER
+======================================== */
+
+#custom-arch:hover,
+#workspaces:hover,
+#custom-notifications:hover,
+#clock:hover,
+#network:hover,
+#custom-screenshot:hover,
+#pulseaudio:hover,
+#custom-brightness:hover,
+#bluetooth:hover,
+#battery:hover,
+#custom-power:hover {
+    background: rgba(49, 50, 68, 0.97);
+}
+
+/* ========================================
+   TOOLTIP
+======================================== */
+
+tooltip {
+    background: rgba(0, 0, 0, 0.95);
+
+    color: #e5e7eb;
+
+    border-radius: 20px;
+
+    border: 1.5px solid rgba(137,180,250,0.90);
+
+    padding: 50px;
+}
+
+/* ========================================
+   CALENDARIO
+======================================== */
+
+tooltip calendar {
+    font-size: 20px;
+
+    padding: 12px;
+}
+
+/* DIA ACTUAL */
+
+tooltip calendar.highlight {
+    background: #89b4fa;
+
+    color: #111111;
+
+    font-weight: bold;
+
+    border-radius: 12px;
+}

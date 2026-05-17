@@ -1,0 +1,107 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: " Applications ";
+    drun-display-format: "{icon}  {name}";
+}
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+
+    bg: rgba(17,17,27,0.95);
+    bg-alt: rgba(30,30,46,0.30);
+
+    fg: #cdd6f4;
+
+    selected: rgba(137, 180, 250, 0.22);
+}
+
+/* VENTANA */
+window {
+
+    transparency: "real";
+
+    location: center;
+    anchor: center;
+
+    width: 720;
+
+    border-radius: 22px;
+
+    background-color: @bg;
+}
+
+/* CONTENEDOR */
+mainbox {
+    background-color: transparent;
+
+    spacing: 14;
+    padding: 22px;
+}
+
+/* BUSCADOR */
+inputbar {
+    background-color: @bg-alt;
+
+    border-radius: 16px;
+
+    padding: 14px;
+}
+
+/* TEXTO */
+prompt,
+entry {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+/* LISTA */
+listview {
+    columns: 1;
+    lines: 8;
+
+    spacing: 6;
+
+    scrollbar: false;
+
+    background-color: transparent;
+}
+
+/* ELEMENTOS */
+element {
+    background-color: transparent;
+
+    border-radius: 14px;
+
+    padding: 12px;
+}
+
+/* TODOS LOS ESTADOS */
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+/* SELECCIONADO */
+element selected.normal {
+    background-color: @selected;
+    text-color: #cdd6f4;
+}
+
+/* ICONOS */
+element-icon {
+    size: 28px;
+
+    background-color: transparent;
+}
+
+/* TEXTO */
+element-text {
+    background-color: transparent;
+
+    text-color: inherit;
+
+    vertical-align: 0.5;
+}
