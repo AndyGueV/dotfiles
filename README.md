@@ -56,6 +56,18 @@ Minimalist and modern Arch Linux + Hyprland setup.
 
 ---
 
+## 📸 Screenshots
+
+### Fastfetch , Yazi, Btop
+
+![desktop](./screenshots/desktop.png)
+
+---
+
+### Rofi + Waynsc
+
+![terminal](./screenshots/terminal.png)
+
 ## 🚀 Installation
 
 ```bash
